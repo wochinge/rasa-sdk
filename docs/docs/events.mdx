@@ -6,3 +6,20 @@ title: Events
 
 ```yaml (docs/sources/rasa_sdk/events.py)
 ```
+
+```python-testable
+from rasa_sdk.events import UserUttered
+
+UserUttered("this is legit!")
+```
+
+
+```python-testable
+UserUttered("this should fail!")
+```
+
+```python-testable
+from rasa_sdk.events import UserUttered
+
+UserUttered("this is a typo", parse_daata={})
+```
